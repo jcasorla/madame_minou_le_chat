@@ -1,0 +1,90 @@
+/* .wrapper {  position: relative;  padding-top: 56.25%; /* 16:9 Aspect Ratio} */
+/* .madameChat{
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    object-fit: contain; 
+    position:absolute;
+    z-index:-10; 
+    /* position: absolute;  
+    left: 0;  
+    top: 0;  
+    width: 100%;  
+    height: auto; */
+/* } */
+.container {
+  text-align: center;
+}
+
+/* .container {  
+    display: grid;  
+    grid-template-columns: 1fr 1fr 1fr;   
+    grid-template-rows: 50px 50px;  
+}
+.container > div > img {  
+    width: 100%;  
+    height: 100%;  
+    object-fit: cover;  
+} */
+
+/* h1{
+    margin-top: 80px;
+} */
+
+/* // Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap */
+
+/* // Small devices (landscape phones, 576px and up) */
+/* @media (min-width: 576px) { 
+    .madameChat{
+        width: 100%;
+        min-width: 100%;
+        max-width: 100;
+        position:absolute;
+        z-index:-10; 
+    }
+ } */
+
+/* // Medium devices (tablets, 768px and up) */
+/* @media (min-width: 768px) { 
+    
+ } */
+
+/* // Large devices (desktops, 992px and up) */
+/* @media (min-width: 992px) { ... } */
+
+/* // Extra large devices (large desktops, 1200px and up) */
+/* @media (min-width: 1200px) { ... } */
+#enter {
+  display: block;
+  margin: auto;
+  animation: example 14s linear infinite;
+}
+
+.madameChat {
+  max-height: 800px;
+  margin: auto;
+  margin-top: -50px;
+}
+@keyframes example {
+  0% {
+    background-color: rgb(76, 175, 80);
+    color:black;
+  }
+  25% {
+
+  }
+  50% {
+    background-color: orange;
+    color:white;
+  }
+  75% {
+
+  }
+  100% {
+    background-color: rgb(76, 175, 80);
+    color:black;
+    transform:rotate(360deg);
+
+  }
+}
