@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReadingService } from './reading.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,7 +19,7 @@ import { MultiPlayerRoomComponent } from './multi-player-room/multi-player-room.
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ReadingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

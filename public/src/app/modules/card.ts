@@ -12,13 +12,7 @@ export class Card{
         this.rank=rank;
         
         
-        // if(this.rank in this.ranks && this.suit in this.suits){
-        //     return true;
-        // }
-        // else{
-        //     console.log("Wrong suit or rank")
-        //     return false;
-        // }      
+        
     }
     
   
