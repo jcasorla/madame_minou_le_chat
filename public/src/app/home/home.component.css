@@ -1,3 +1,90 @@
+
+.container {
+  text-align: center;
+  margin-top: 150px;
+}
+
+#enter {
+  display: block;
+  margin: auto;
+  /* animation: example 14s linear infinite; */
+  animation-name: bounce, change-bg-color;
+  animation-duration: 3s, 2s;
+}
+@keyframes bounce {
+
+  from {
+    top: 100px;
+    animation-timing-function: ease-out;
+  }
+
+  25% {
+    top: 50px;
+    animation-timing-function: ease-in;
+  }
+
+  50% {
+    top: 150px;
+    animation-timing-function: ease-out;
+  }
+
+  75% {
+    top: 75px;
+    animation-timing-function: ease-in;
+  }
+
+  to {
+    top: 100px;
+  }
+
+}
+
+.madameChat {
+  max-height: 800px;
+  margin: auto;
+  margin-top: -50px;
+}
+/* @keyframes example {
+  0% {
+    background-color: rgb(76, 175, 80);
+    color:black;
+  }
+  25% {
+
+  }
+  50% {
+    background-color: orange;
+    color:white;
+  }
+  75% {
+
+  }
+  100% {
+    background-color: rgb(76, 175, 80);
+    color:black;
+    transform:rotate(180deg);
+
+  }
+} */
+h1 {
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+
+
 /* .wrapper {  position: relative;  padding-top: 56.25%; /* 16:9 Aspect Ratio} */
 /* .madameChat{
     width: 100%;
@@ -12,9 +99,7 @@
     width: 100%;  
     height: auto; */
 /* } */
-.container {
-  text-align: center;
-}
+
 
 /* .container {  
     display: grid;  
@@ -55,36 +140,3 @@
 
 /* // Extra large devices (large desktops, 1200px and up) */
 /* @media (min-width: 1200px) { ... } */
-#enter {
-  display: block;
-  margin: auto;
-  animation: example 14s linear infinite;
-}
-
-.madameChat {
-  max-height: 800px;
-  margin: auto;
-  margin-top: -50px;
-}
-@keyframes example {
-  0% {
-    background-color: rgb(76, 175, 80);
-    color:black;
-  }
-  25% {
-
-  }
-  50% {
-    background-color: orange;
-    color:white;
-  }
-  75% {
-
-  }
-  100% {
-    background-color: rgb(76, 175, 80);
-    color:black;
-    transform:rotate(360deg);
-
-  }
-}

@@ -10,9 +10,23 @@ import { Deck } from '../modules/deck';
   styleUrls: ['./room.component.css']
 })
 export class RoomComponent implements OnInit {
-  hand = []; yourCard; yourCardImg; yourReading;
 
-  reads = []; myread = {card : '', reading: ''}; count = 7;
+
+
+reads = [];
+myread = {card : '', reading: ''};
+kount = 7;
+
+  hand=[];
+  yourCard;
+  yourCardImg;
+  yourReading;
+  count = 0;
+  display;
+  imgArr = ["/assets/img/dreamstime_xs_3.jpg", "/assets/img/cuteLook.jpg", "/assets/img/crazy.jpg", "/assets/img/bandana.jpg", "/assets/img/whiskers.jpg", "/assets/img/butterfly.jpg", "/assets/img/adorable.jpg", "/assets/img/roar.jpg", "/assets/img/nap.jpg"];
+  currentImg = this.imgArr[this.count]
+  deck= new Deck();
+
 
   deck = new Deck(); parentVar: any; myevent = '';
 
@@ -35,9 +49,17 @@ export class RoomComponent implements OnInit {
 
   }
 
-    take() {
-      this.hand.push(this.deck.deal());
-  }
+  take(){
+    this.hand.push(this.deck.deal());
+    console.log("In take", this.hand)
+    this.count = (this.count+1)%this.imgArr.length;
+    this.currentImg = this.imgArr[this.count];
+    if (this.count == 8){
+      this.display = "true";
+    }
+    console.log(this.imgArr, "I'm imgArr array");
+}
+
 
   discard(a,b) {
       this.hand.splice(a,b);
@@ -71,7 +93,7 @@ export class RoomComponent implements OnInit {
 
       this._readingService.hand(this.yourCard);
       this._readingService.readings(this.yourCard);
-      this.count--;
+      this.kount--;
       this.onCreate();
 
   }
@@ -120,7 +142,6 @@ export class RoomComponent implements OnInit {
   }
 
 }
-
 
 
 
