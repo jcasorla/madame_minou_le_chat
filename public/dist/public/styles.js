@@ -338,7 +338,7 @@ if (content.locals) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\my_data\CodingDojo\stacks\mean_stack\projects\madame_minou_le_chat\public\src\styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! /Users/vicky/Documents/angular_final_project/public/src/styles.css */"./src/styles.css");
 
 
 /***/ })

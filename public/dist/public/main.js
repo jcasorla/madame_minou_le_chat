@@ -32,7 +32,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\n  <a class=\"navbar-brand\" href=\"#\">Madame Minou Le Chat</a>\n  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarColor02\" aria-controls=\"navbarColor02\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n\n  <div class=\"collapse navbar-collapse\" id=\"navbarColor02\">\n    <ul class=\"navbar-nav mr-auto\">\n      <li class=\"nav-item active\">\n        <a class=\"nav-link\" [routerLink]=\"['home']\">Home <span class=\"sr-only\">(current)</span></a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" [routerLink]=\"['reading-room']\">Reading Room</a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" [routerLink]=\"['multiplayer']\">Multi Player Readings</a>\n      </li>\n    </ul>\n  </div>\n</nav>\n\n<div class=\"row\">\n  <div class=\"col-lg\">\n      <router-outlet></router-outlet>\n  </div>\n\n</div>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\n  <a class=\"navbar-brand\" href=\"#\">Madame Minou Le Chat</a>\n  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarColor02\" aria-controls=\"navbarColor02\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n\n  <div class=\"collapse navbar-collapse\" id=\"navbarColor02\">\n    <ul class=\"navbar-nav mr-auto\">\n      <li class=\"nav-item active\">\n        <a class=\"nav-link\" [routerLink]=\"['home']\">Home <span class=\"sr-only\">(current)</span></a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" [routerLink]=\"['reading-room']\">Reading Room</a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" [routerLink]=\"['multiplayer']\">Multi Player Readings</a>\n      </li>\n    </ul>\n  </div>\n</nav>\n\n<div class=\"row\">\n  <div class=\"col-lg\">\n    <br><br><br>\n      <router-outlet></router-outlet>\n  </div>\n\n</div>\n\n");
 
 /***/ }),
 
@@ -62,6 +62,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/reads/reads.component.html":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/reads/reads.component.html ***!
+  \**********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<p>reads works!</p>\n<div *ngFor=\"let child of childVar\">\n  <p class=\"collor\" > {{child.reading}} </p>\n  </div>\n\n");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/room/room.component.html":
 /*!********************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/room/room.component.html ***!
@@ -71,7 +84,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n\n<div class=\"container\">\n    <div class=\"row\">\n        <div class=\"col-sm-5\">\n            <div *ngIf='yourCard'>\n                <img  class=\"pickCard\" src=\"/assets/img/dreamstime_xs_2.jpg\" alt='pickCard'>\n                <!-- <img  class=\"pickCard\" src=\"/assets/img/dreamstime_xs.jpg\" alt='pickCard'> -->\n            \n            </div>\n            <div *ngIf='!yourCard'>\n                <!-- <img class=\"pickCard\" src=\"/assets/img/click.jpg\" alt='pickCard'> -->\n                <!-- <img class=\"pickCard\" src=\"/assets/img/dreamstime_xs.jpg\" alt='pickCard'> -->\n                <img class=\"pickCard\" src=\"/assets/img/dreamstime_xs_3.jpg\" alt='pickCard'>\n            \n            </div>\n\n        </div>\n\n        <div class=\"col-xl\">\n            <div class=\"cardsDown\" *ngIf='yourCard'>\n                <h1>{{yourReading}}</h1>\n                <img class=\"img2\" src=\"/assets/img/cards/{{yourCardImg}}.png\" alt=\"card\">\n                <button (click)=\"shuffle()\" type=\"button\" class=\"btn btn-link\">Shuffle</button>\n            \n            </div>\n            <div class=\"placeholder\" *ngIf='!yourCard'>\n                \n            \n            </div>\n            <h1 *ngIf='!yourCard'>Pick a Card</h1>\n\n            <a (click)=\"read()\"><img class=\"img1\"  src=\"/assets/img/cards/back_cards-07.png\" alt=\"redCard\"></a>\n        </div>\n\n    </div>\n</div>\n\n \n");
+/* harmony default export */ __webpack_exports__["default"] = ("\n\n<div class=\"container\">\n    <div class=\"row\">\n        <div class=\"col-sm-5\">\n            <div *ngIf='yourCard'>\n                <img  class=\"pickCard\" src=\"/assets/img/dreamstime_xs_2.jpg\" alt='pickCard'>\n                <!-- <img  class=\"pickCard\" src=\"/assets/img/dreamstime_xs.jpg\" alt='pickCard'> -->\n\n            </div>\n            <div *ngIf='!yourCard'>\n                <!-- <img class=\"pickCard\" src=\"/assets/img/click.jpg\" alt='pickCard'> -->\n                <!-- <img class=\"pickCard\" src=\"/assets/img/dreamstime_xs.jpg\" alt='pickCard'> -->\n                <img class=\"pickCard\" src=\"/assets/img/dreamstime_xs_3.jpg\" alt='pickCard'>\n\n            </div>\n\n        </div>\n\n        <div class=\"col-xl\">\n            <div class=\"cardsDown\" *ngIf='yourCard'>\n                <h1>{{yourReading}}</h1>\n                <img class=\"img2\" src=\"/assets/img/cards/{{yourCardImg}}.png\" alt=\"card\">\n                <button (click)=\"shuffle()\" type=\"button\" class=\"btn btn-link\">Shuffle</button>\n\n            </div>\n            <div class=\"placeholder\" *ngIf='!yourCard'>\n\n\n            </div>\n            <h1 *ngIf='!yourCard'>Pick a Card</h1>\n\n            <a (click)=\"read()\"><img class=\"img1\"  src=\"/assets/img/cards/back_cards-07.png\" alt=\"redCard\"></a>\n        </div>\n\n    </div>\n    <app-reads *ngIf=\"reads.length == 7\" [childVar]=\"reads\" >  </app-reads>\n</div>\n\n\n");
 
 /***/ }),
 
@@ -408,6 +421,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
 /* harmony import */ var _room_room_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./room/room.component */ "./src/app/room/room.component.ts");
 /* harmony import */ var _multi_player_room_multi_player_room_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./multi-player-room/multi-player-room.component */ "./src/app/multi-player-room/multi-player-room.component.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _reads_reads_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./reads/reads.component */ "./src/app/reads/reads.component.ts");
 
 
 
@@ -415,6 +430,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+//import { HttpClient } from '@angular/common/http';
 
 
 let AppModule = class AppModule {
@@ -425,11 +443,13 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
             _home_home_component__WEBPACK_IMPORTED_MODULE_6__["HomeComponent"],
             _room_room_component__WEBPACK_IMPORTED_MODULE_7__["RoomComponent"],
-            _multi_player_room_multi_player_room_component__WEBPACK_IMPORTED_MODULE_8__["MultiPlayerRoomComponent"]
+            _multi_player_room_multi_player_room_component__WEBPACK_IMPORTED_MODULE_8__["MultiPlayerRoomComponent"],
+            _reads_reads_component__WEBPACK_IMPORTED_MODULE_10__["ReadsComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-            _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"]
+            _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"],
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_9__["HttpClientModule"]
         ],
         providers: [_reading_service__WEBPACK_IMPORTED_MODULE_3__["ReadingService"]],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
@@ -454,61 +474,61 @@ __webpack_require__.r(__webpack_exports__);
 
 const hand = {
     //Hearts
-    "Ace Hearts": "AH",
-    "Two Hearts": "2H",
-    "Three Hearts": "3H",
-    "Four Hearts": "4H",
-    "Five Hearts": "5H",
-    "Six Hearts": "6H",
-    "Seven Hearts": "7H",
-    "Eight Hearts": "8H",
-    "Nine Hearts": "9H",
-    "Ten Hearts": "10H",
-    "Jack Hearts": "JH",
-    "Queen Hearts": "QH",
-    "King Hearts": "KH",
+    'Ace Hearts': 'AH',
+    'Two Hearts': '2H',
+    'Three Hearts': '3H',
+    'Four Hearts': '4H',
+    'Five Hearts': '5H',
+    'Six Hearts': '6H',
+    'Seven Hearts': '7H',
+    'Eight Hearts': '8H',
+    'Nine Hearts': '9H',
+    'Ten Hearts': '10H',
+    'Jack Hearts': 'JH',
+    'Queen Hearts': 'QH',
+    'King Hearts': 'KH',
     //Clubs
-    "Ace Clubs": "AC",
-    "Two Clubs": "2C",
-    "Three Clubs": "3C",
-    "Four Clubs": "4C",
-    "Five Clubs": "5C",
-    "Six Clubs": "6C",
-    "Seven Clubs": "7C",
-    "Eight Clubs": "8C",
-    "Nine Clubs": "9C",
-    "Ten Clubs": "10C",
-    "Jack Clubs": "JC",
-    "Queen Clubs": "QC",
-    "King Clubs": "KC",
+    'Ace Clubs': 'AC',
+    'Two Clubs': '2C',
+    'Three Clubs': '3C',
+    'Four Clubs': '4C',
+    'Five Clubs': '5C',
+    'Six Clubs': '6C',
+    'Seven Clubs': '7C',
+    'Eight Clubs': '8C',
+    'Nine Clubs': '9C',
+    'Ten Clubs': '10C',
+    'Jack Clubs': 'JC',
+    'Queen Clubs': 'QC',
+    'King Clubs': 'KC',
     //Diamonds
-    "Ace Diamonds": "AD",
-    "Two Diamonds": "2D",
-    "Three Diamonds": "3D",
-    "Four Diamonds": "4D",
-    "Five Diamonds": "5D",
-    "Six Diamonds": "6D",
-    "Seven Diamonds": "7D",
-    "Eight Diamonds": "8D",
-    "Nine Diamonds": "9D",
-    "Ten Diamonds": "10D",
-    "Jack Diamonds": "JD",
-    "Queen Diamonds": "QD",
-    "King Diamonds": "KD",
+    'Ace Diamonds': 'AD',
+    'Two Diamonds': '2D',
+    'Three Diamonds': '3D',
+    'Four Diamonds': '4D',
+    'Five Diamonds': '5D',
+    'Six Diamonds': '6D',
+    'Seven Diamonds': '7D',
+    'Eight Diamonds': '8D',
+    'Nine Diamonds': '9D',
+    'Ten Diamonds': '10D',
+    'Jack Diamonds': 'JD',
+    'Queen Diamonds': 'QD',
+    'King Diamonds': 'KD',
     //Spades
-    "Ace Spades": "AS",
-    "Two Spades": "2S",
-    "Three Spades": "3S",
-    "Four Spades": "4S",
-    "Five Spades": "5S",
-    "Six Spades": "6S",
-    "Seven Spades": "7S",
-    "Eight Spades": "8S",
-    "Nine Spades": "9S",
-    "Ten Spades": "10S",
-    "Jack Spades": "JS",
-    "Queen Spades": "QS",
-    "King Spades": "KS",
+    'Ace Spades': 'AS',
+    'Two Spades': '2S',
+    'Three Spades': '3S',
+    'Four Spades': '4S',
+    'Five Spades': '5S',
+    'Six Spades': '6S',
+    'Seven Spades': '7S',
+    'Eight Spades': '8S',
+    'Nine Spades': '9S',
+    'Ten Spades': '10S',
+    'Jack Spades': 'JS',
+    'Queen Spades': 'QS',
+    'King Spades': 'KS',
 };
 
 
@@ -802,29 +822,123 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./data */ "./src/app/data/index.ts");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
 
 
 
- //make data subscribeble
+ // make data to subscribe
+
 let ReadingService = class ReadingService {
-    constructor() {
-        this.readings$ = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"](); //reading is a subsribeble
+    constructor(http) {
+        this.http = http;
+        this.base = 'https://5d8d5048370f02001405be67.mockapi.io/cats';
+        this.readings$ = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"](); // subscribe to read
         this.hand$ = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
     }
     readings(card) {
-        console.log("got card" + card);
+        // console.log("got card"+ card);
         this.readings$.next(_data__WEBPACK_IMPORTED_MODULE_2__["readings"][card]);
     }
     hand(card) {
-        console.log("in hand of service");
+        // console.log("in hand of service");
         this.hand$.next(_data__WEBPACK_IMPORTED_MODULE_2__["hand"][card]);
     }
+    createRead(read) {
+        return this.http.post(this.base, read);
+    }
+    getReads() {
+        console.log('trying to read db');
+        return this.http.get(this.base);
+    }
+    removeRead(id) {
+        console.log('I am in remove service');
+        return this.http.delete(`${this.base}/${id}`);
+    }
 };
+ReadingService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"] }
+];
 ReadingService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
         providedIn: 'root'
     })
 ], ReadingService);
+
+
+
+/***/ }),
+
+/***/ "./src/app/reads/reads.component.css":
+/*!*******************************************!*\
+  !*** ./src/app/reads/reads.component.css ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".collor{\n  color: aliceblue;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcmVhZHMvcmVhZHMuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGdCQUFnQjtBQUNsQiIsImZpbGUiOiJzcmMvYXBwL3JlYWRzL3JlYWRzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29sbG9ye1xuICBjb2xvcjogYWxpY2VibHVlO1xufVxuIl19 */");
+
+/***/ }),
+
+/***/ "./src/app/reads/reads.component.ts":
+/*!******************************************!*\
+  !*** ./src/app/reads/reads.component.ts ***!
+  \******************************************/
+/*! exports provided: ReadsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReadsComponent", function() { return ReadsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _reading_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../reading.service */ "./src/app/reading.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+
+
+
+
+
+let ReadsComponent = class ReadsComponent {
+    // reads: Read[] = [];
+    constructor(route, readingService) {
+        this.route = route;
+        this.readingService = readingService;
+        this.purge = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.unsubscribe$ = new rxjs__WEBPACK_IMPORTED_MODULE_4__["Subject"]();
+    }
+    ngOnInit() {
+    }
+    ngOnChanges() {
+        if (this.childVar.length > 7) {
+            this.purge.emit();
+            this.childVar.length = 0;
+        }
+    }
+    ngOnDestroy() {
+        this.unsubscribe$.next();
+        this.unsubscribe$.complete();
+    }
+};
+ReadsComponent.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
+    { type: _reading_service__WEBPACK_IMPORTED_MODULE_2__["ReadingService"] }
+];
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], ReadsComponent.prototype, "childVar", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()
+], ReadsComponent.prototype, "purge", void 0);
+ReadsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-reads',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./reads.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/reads/reads.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./reads.component.css */ "./src/app/reads/reads.component.css")).default]
+    })
+], ReadsComponent);
 
 
 
@@ -863,13 +977,18 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+// import { Read } from '../models/read';
 let RoomComponent = class RoomComponent {
     constructor(_readingService, _route, _router) {
         this._readingService = _readingService;
         this._route = _route;
         this._router = _router;
         this.hand = [];
+        this.reads = [];
+        this.myread = { card: '', reading: '' };
+        this.count = 7;
         this.deck = new _modules_deck__WEBPACK_IMPORTED_MODULE_4__["Deck"]();
+        this.myevent = '';
     }
     ngOnInit() {
         this._readingService.readings$.subscribe(reading => {
@@ -878,6 +997,7 @@ let RoomComponent = class RoomComponent {
         this._readingService.hand$.subscribe(hand => {
             this.yourCardImg = hand;
         });
+        //this.readData();
     }
     take() {
         this.hand.push(this.deck.deal());
@@ -889,21 +1009,58 @@ let RoomComponent = class RoomComponent {
         let i = 0;
         let card;
         for (i; i < this.hand.length; i++) {
+            // console.log(this.hand)
             card = this.hand[i].getRank() + " " + this.hand[i].getSuit();
             this.yourCard = card;
         }
     }
     read() {
+        if (this.hand.length > 51) {
+            this.reset();
+            this.shuffle();
+        }
+        if (this.reads.length > 7) {
+            this.onPurge();
+        }
         this.take();
         this.showHand();
-        console.log(this.yourCard);
+        // console.log(this.yourCard);
         this._readingService.hand(this.yourCard);
         this._readingService.readings(this.yourCard);
+        this.count--;
+        this.onCreate();
     }
     shuffle() {
-        this.deck.reset();
         this.deck.shuffle();
         this.yourCard = null;
+    }
+    reset() {
+        this.deck = new _modules_deck__WEBPACK_IMPORTED_MODULE_4__["Deck"]();
+        this.hand = [];
+    }
+    onCreate() {
+        this.myread = { card: this.yourCard, reading: this.yourReading };
+        // console.log('My generated data', this.yourCard, this.yourReading);
+        // console.log('reading from db', this.myread);
+        this._readingService.createRead(this.myread).subscribe(createdRead => {
+            this.reads = [...this.reads, createdRead];
+            console.log(this.reads);
+        });
+    }
+    dataFromChild(eventData) {
+        this.parentVar = null;
+        this.myevent = eventData;
+        console.log('event data from child:', eventData);
+    }
+    onPurge() {
+        for (let i = 0; i < this.reads.length; i++) {
+            console.log(this.reads);
+            const obs = this._readingService.removeRead(this.reads[i].id);
+            obs.subscribe(data => {
+                console.log('data from delete:', data);
+            });
+        }
+        this.reads = [];
     }
 };
 RoomComponent.ctorParameters = () => [
@@ -988,7 +1145,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\my_data\CodingDojo\stacks\mean_stack\projects\madame_minou_le_chat\public\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/vicky/Documents/angular_final_project/public/src/main.ts */"./src/main.ts");
 
 
 /***/ })

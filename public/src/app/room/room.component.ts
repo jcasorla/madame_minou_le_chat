@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ReadingService } from '../reading.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Deck } from '../modules/deck';
+// import { Read } from '../models/read';
 
 @Component({
   selector: 'app-home',
@@ -9,14 +10,11 @@ import { Deck } from '../modules/deck';
   styleUrls: ['./room.component.css']
 })
 export class RoomComponent implements OnInit {
-  hand=[];
-  yourCard;
-  yourCardImg;
-  yourReading;
+  hand = []; yourCard; yourCardImg; yourReading;
 
-  deck= new Deck();
+  reads = []; myread = {card : '', reading: ''}; count = 7;
 
-  
+  deck = new Deck(); parentVar: any; myevent = '';
 
   constructor(
     private _readingService: ReadingService,
@@ -27,58 +25,107 @@ export class RoomComponent implements OnInit {
   ngOnInit() {
     this._readingService.readings$.subscribe(reading => {
       this.yourReading = reading;
-    })
+    });
 
     this._readingService.hand$.subscribe(hand => {
       this.yourCardImg = hand;
-    })
+    });
+
+    //this.readData();
+
   }
 
-  take(){
-    this.hand.push(this.deck.deal());
+    take() {
+      this.hand.push(this.deck.deal());
+  }
+
+  discard(a,b) {
+      this.hand.splice(a,b);
+
+  }
+  showHand() {
+      let i = 0;
+      let card;
+
+      for (i; i < this.hand.length; i++){
+          // console.log(this.hand)
+          card = this.hand[i].getRank() +  " " + this.hand[i].getSuit();
+          this.yourCard = card;
+
+      }
+  }
+  read() {
+
+      if (this.hand.length > 51){
+        this.reset();
+        this.shuffle();
+      }
+
+      if (this.reads.length > 7) {
+        this.onPurge();
+      }
+
+      this.take();
+      this.showHand();
+      // console.log(this.yourCard);
+
+      this._readingService.hand(this.yourCard);
+      this._readingService.readings(this.yourCard);
+      this.count--;
+      this.onCreate();
+
+  }
+
+  shuffle() {
+    this.deck.shuffle();
+    this.yourCard = null;
+  }
+
+  reset(){
+    this.deck = new Deck();
+    this.hand = [];
+  }
+
+    onCreate() {
+    this.myread = {card: this.yourCard, reading: this.yourReading};
+    // console.log('My generated data', this.yourCard, this.yourReading);
+    // console.log('reading from db', this.myread);
+
+    this._readingService.createRead(this.myread).subscribe(createdRead => {
+      this.reads = [...this.reads, createdRead];
+      console.log(this.reads);
+    });
+  }
+
+  dataFromChild(eventData) {
+    this.parentVar = null;
+    this.myevent = eventData;
+    console.log('event data from child:', eventData);
+
+  }
+
+  onPurge() {
+      for ( let i=0; i < this.reads.length; i++ ) {
+
+        console.log(this.reads);
+
+        const obs = this._readingService.removeRead(this.reads[i].id);
+        obs.subscribe(data => {
+          console.log('data from delete:', data);
+        });
+      }
+      this.reads = [];
+
+
+  }
+
 }
 
 
 
-discard(a,b){
-    this.hand.splice(a,b);
-
-}
-showHand(){
-    let i=0;
-    let card;
-
-    for (i; i<this.hand.length; i++){
-        card= this.hand[i].getRank()+ " "+ this.hand[i].getSuit();
-        this.yourCard=card;
-        
-    }
-}
-read(){
-    this.take();
-    this.showHand();
-    console.log(this.yourCard);
-
-    this._readingService.hand(this.yourCard);
-    this._readingService.readings(this.yourCard);
-    
-
-}
-
-shuffle(){
-  this.deck.reset();
-  this.deck.shuffle();
-  this.yourCard=null;
-}
-
-}
 
 
 
 
 
 
-
-
-
- 
