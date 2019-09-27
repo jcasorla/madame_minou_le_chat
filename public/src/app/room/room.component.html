@@ -1,40 +1,33 @@
 
-
 <div class="container">
+        <input
+        id="home"
+        type="button"
+        class="btn btn-outline-success"
+        [routerLink]="['/home']"
+        value="Home"
+      />
     <div class="row">
-        <div class="col-sm-5">
-            <div *ngIf='yourCard'>
-                <img  class="pickCard" src="/assets/img/dreamstime_xs_2.jpg" alt='pickCard'>
-                <!-- <img  class="pickCard" src="/assets/img/dreamstime_xs.jpg" alt='pickCard'> -->
-
+        <div id="blend1" class="col-sm-5">
+            <img class="pickCard" [src]="currentImg" alt='pickCard'>
+            <div *ngIf= "display">
+                <h1>Return later... Madame Minou Le Chat needs a power nap! </h1>
             </div>
-            <div *ngIf='!yourCard'>
-                <!-- <img class="pickCard" src="/assets/img/click.jpg" alt='pickCard'> -->
-                <!-- <img class="pickCard" src="/assets/img/dreamstime_xs.jpg" alt='pickCard'> -->
-                <img class="pickCard" src="/assets/img/dreamstime_xs_3.jpg" alt='pickCard'>
-
-            </div>
-
         </div>
-
-        <div class="col-xl">
+        <div id="blend1" class="col-xl">
             <div class="cardsDown" *ngIf='yourCard'>
                 <h1>{{yourReading}}</h1>
+                <div class="color-overlay"></div>
                 <img class="img2" src="/assets/img/cards/{{yourCardImg}}.png" alt="card">
-                <button (click)="shuffle()" type="button" class="btn btn-link">Shuffle</button>
-
+                <!-- <button (click)="shuffle()" type="button" class="btn btn-link">Shuffle</button> -->
             </div>
-            <div class="placeholder" *ngIf='!yourCard'>
-
-
-            </div>
+            <div class="placeholder" *ngIf='!yourCard'></div>
             <h1 *ngIf='!yourCard'>Pick a Card</h1>
-
-            <a (click)="read()"><img class="img1"  src="/assets/img/cards/back_cards-07.png" alt="redCard"></a>
+            <a *ngIf="!display" (click)="read()"><img class="img1"  src="/assets/img/cards/back_cards-07.png" alt="redCard"></a>
         </div>
-
     </div>
-    <app-reads *ngIf="reads.length == 7" [childVar]="reads" >  </app-reads>
+	<app-reads *ngIf="reads.length == 7" [childVar]="reads" >  </app-reads>
 </div>
 
+ 
 
