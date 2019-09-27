@@ -13,7 +13,7 @@
     "Nine Hearts": "You will meet a special furry friend around the corner",
     "Ten Hearts": "Keep your eyes open there are interesting and tasty mice",
     "Jack Hearts": "If you love someone fight for them",
-    "Queen Hearts": "Money cant buy happyness unless you pay someone to scratch your belly",
+    "Queen Hearts": "Money cant buy happiness unless you pay someone to scratch your belly",
     "King Hearts": "The neighbors grass is always greener... enjoy",
 
     //Clubs
