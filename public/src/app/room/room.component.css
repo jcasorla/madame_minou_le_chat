@@ -1,17 +1,26 @@
 .pickCard{
-    height:550px;
-    /* width: 100%;
-    min-width: 100%;
-    max-width: 100;
-    /* position:absolute; */
-    
-    /* background-image: cover; */
-    /* z-index:-10;  */
-    /* margin-left:34.5%; */
+    height:500px;
     margin:auto;
+    opacity: 0.7;
+    /* background-blend-mode: overlay; */
+    /* float: left; */
 }
+/* #blend1 img first-child {
+    position: absolute;
+    mix-blend-mode: darken;
+  } */
+  /* .color-overlay{
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .7;
+    position: absolute;
+} */
 .container{
-    text-align:center;
+    /* text-align:center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #pick{
     color: rgba(99, 240, 17, 0.829);
@@ -21,13 +30,16 @@
 
 .img1{
     width: 90%;
+
    
 }
 
 .img2{
     width: 20%;
+
    
 }
+
 .placeholder{
     height: 230px;
 }
@@ -36,8 +48,11 @@
 }
 
 h1 {
+    margin-top: 40%;
     animation-name: slidein;
     animation-duration: 3s;
+    z-index: 1;
+    color: rgb(18, 219, 176);
   }
   
   @keyframes slidein {
