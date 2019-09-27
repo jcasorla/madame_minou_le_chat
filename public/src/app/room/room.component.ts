@@ -15,7 +15,7 @@ export class RoomComponent implements OnInit {
 
 reads = [];
 myread = {card : '', reading: ''};
-kount = 7;
+kount = 8;
 
   hand=[];
   yourCard;
