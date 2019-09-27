@@ -23,7 +23,8 @@ kount = 8;
   yourReading;
   count = 0;
   display;
-  imgArr = ["/assets/img/dreamstime_xs_3.jpg", "/assets/img/cuteLook.jpg", "/assets/img/crazy.jpg", "/assets/img/bandana.jpg", "/assets/img/whiskers.jpg", "/assets/img/butterfly.jpg", "/assets/img/adorable.jpg", "/assets/img/roar.jpg", "/assets/img/nap.jpg"];
+  //"/assets/img/cuteLook.jpg",
+  imgArr = ["/assets/img/dreamstime_xs_3.jpg", "/assets/img/crazy.jpg", "/assets/img/bandana.jpg", "/assets/img/whiskers.jpg", "/assets/img/butterfly.jpg", "/assets/img/adorable.jpg", "/assets/img/roar.jpg", "/assets/img/nap.jpg"];
   currentImg = this.imgArr[this.count]
   deck= new Deck();
 
@@ -54,7 +55,7 @@ kount = 8;
     console.log("In take", this.hand)
     this.count = (this.count+1)%this.imgArr.length;
     this.currentImg = this.imgArr[this.count];
-    if (this.count == 8){
+    if (this.count == 7){
       this.display = "true";
     }
     console.log(this.imgArr, "I'm imgArr array");

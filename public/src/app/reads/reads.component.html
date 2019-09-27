@@ -1,5 +1,20 @@
-<p>reads works!</p>
+<!-- <p>reads works!</p>
 <div *ngFor="let child of childVar">
   <p class="collor" > {{child.reading}} </p>
-  </div>
+  </div> -->
+
+  <table class="table table-dark" *ngFor="let child of childVar">
+    <thead>
+      <tr>
+       
+        <th scope="col">Reading</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{child.reading}}</td>
+      </tr>
+      
+    </tbody>
+  </table>
 
