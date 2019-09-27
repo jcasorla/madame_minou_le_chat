@@ -12,7 +12,8 @@ import { Read } from './models/read';
 })
 export class ReadingService {
 
-  private readonly base = 'https://5d8d5048370f02001405be67.mockapi.io/cats';
+  // private readonly base = 'https://5d8d5048370f02001405be67.mockapi.io/cats';
+  private readonly base = 'https://5d8e5e9c7162f10014a490a9.mockapi.io/cats';
   readings$ = new Subject<string>();  // subscribe to read
   hand$ = new Subject<string>();
 
