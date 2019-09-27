@@ -1,14 +1,12 @@
 
-
 <div class="container">
     <div class="row">
         <div id="blend1" class="col-sm-5">
-                <img class="pickCard" [src]="currentImg" alt='pickCard'>
-                <div *ngIf= "display">
-                    <h1>Return later... Madame Minou Le Chat needs a power nap! </h1>
-                </div>
+            <img class="pickCard" [src]="currentImg" alt='pickCard'>
+            <div *ngIf= "display">
+                <h1>Return later... Madame Minou Le Chat needs a power nap! </h1>
+            </div>
         </div>
-
         <div id="blend1" class="col-xl">
             <div class="cardsDown" *ngIf='yourCard'>
                 <h1>{{yourReading}}</h1>
@@ -16,12 +14,12 @@
                 <img class="img2" src="/assets/img/cards/{{yourCardImg}}.png" alt="card">
                 <!-- <button (click)="shuffle()" type="button" class="btn btn-link">Shuffle</button> -->
             </div>
-
+            <div class="placeholder" *ngIf='!yourCard'></div>
             <h1 *ngIf='!yourCard'>Pick a Card</h1>
             <a *ngIf="!display" (click)="read()"><img class="img1"  src="/assets/img/cards/back_cards-07.png" alt="redCard"></a>
+
         </div>
     </div>
-
 </div>
 
  

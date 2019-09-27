@@ -17,38 +17,34 @@
     position: absolute;
 } */
 .container{
-    /* text-align:center; */
-    display: flex;
+    text-align:center;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 #pick{
     color: rgba(99, 240, 17, 0.829);
     font-size: 50px;
-    margin-top: 70px;
 }
 
 .img1{
-    width: 90%;
-
-   
+  width: 90%;
 }
 
 .img2{
     width: 20%;
-
-   
 }
 
 .placeholder{
-    height: 230px;
+  height: 230px;
 }
 .cardsDown{
-    height: 270px;
+  height: 270px;
 }
 
+
 h1 {
-    margin-top: 40%;
+    margin-top: 20%;
     animation-name: slidein;
     animation-duration: 3s;
     z-index: 1;
