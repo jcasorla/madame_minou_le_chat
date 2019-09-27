@@ -1,5 +1,12 @@
 
 <div class="container">
+        <input
+        id="home"
+        type="button"
+        class="btn btn-outline-success"
+        [routerLink]="['/home']"
+        value="Home"
+      />
     <div class="row">
         <div id="blend1" class="col-sm-5">
             <img class="pickCard" [src]="currentImg" alt='pickCard'>
@@ -17,7 +24,6 @@
             <div class="placeholder" *ngIf='!yourCard'></div>
             <h1 *ngIf='!yourCard'>Pick a Card</h1>
             <a *ngIf="!display" (click)="read()"><img class="img1"  src="/assets/img/cards/back_cards-07.png" alt="redCard"></a>
-
         </div>
     </div>
 </div>

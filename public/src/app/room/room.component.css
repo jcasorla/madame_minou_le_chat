@@ -5,6 +5,11 @@
     /* background-blend-mode: overlay; */
     /* float: left; */
 }
+#home{
+  margin-right: 100%;
+  outline: 1px solid rgb(12, 12, 212);
+  border-radius: 50%;
+}
 /* #blend1 img first-child {
     position: absolute;
     mix-blend-mode: darken;
