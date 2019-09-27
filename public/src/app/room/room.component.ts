@@ -28,7 +28,7 @@ kount = 7;
   deck= new Deck();
 
 
-  deck = new Deck(); parentVar: any; myevent = '';
+ parentVar: any; myevent = '';
 
   constructor(
     private _readingService: ReadingService,
@@ -142,7 +142,6 @@ kount = 7;
   }
 
 }
-
 
 
 

@@ -53,4 +53,12 @@ testem.log
 
 # System Files
 .DS_Store
+<<<<<<< HEAD
+<<<<<<< HEAD
+Thumbs.db
+=======
+Thumbs.db
+>>>>>>> master
+=======
 
+>>>>>>> f0d3d0d3fc6b4e349ca389d3109c9c36e8110b9f
