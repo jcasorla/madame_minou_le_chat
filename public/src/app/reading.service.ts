@@ -1,28 +1,47 @@
 import { Injectable } from '@angular/core';
-import { readings,hand } from './data';
-import {Subject} from 'rxjs'//make data subscribeble
+import { readings, hand } from './data';
+import {Subject} from 'rxjs' // make data to subscribe
+import { of, Observable } from 'rxjs';
+
+import { HttpClient } from '@angular/common/http';
+import { Read } from './models/read';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class ReadingService {
-  readings$ = new Subject<string>();//reading is a subsribeble
+
+  private readonly base = 'https://5d8d5048370f02001405be67.mockapi.io/cats';
+  readings$ = new Subject<string>();  // subscribe to read
   hand$ = new Subject<string>();
- 
-  
-  constructor() { }
+
+
+  constructor(private readonly http: HttpClient) { }
 
   readings(card){
-    console.log("got card"+ card);
+    // console.log("got card"+ card);
     this.readings$.next(readings[card]);
-    
   }
 
   hand(card){
-    console.log("in hand of service");
+    // console.log("in hand of service");
     this.hand$.next(hand[card]);
-   
   }
+
+  createRead(read: Read): Observable<Read> {
+    return this.http.post<Read>(this.base, read);
+  }
+
+  getReads(): Observable<Read[]> {
+    console.log('trying to read db');
+    return this.http.get<Read[]>(this.base);
+  }
+
+  removeRead(id: number): Observable<Read> {
+    console.log('I am in remove service');
+    return this.http.delete<Read>(`${this.base}/${id}`);
+  }
+
 }
 

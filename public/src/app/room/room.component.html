@@ -26,6 +26,8 @@
             <a *ngIf="!display" (click)="read()"><img class="img1"  src="/assets/img/cards/back_cards-07.png" alt="redCard"></a>
         </div>
     </div>
+	<app-reads *ngIf="reads.length == 7" [childVar]="reads" >  </app-reads>
 </div>
 
  
+
