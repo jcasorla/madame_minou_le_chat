@@ -7,7 +7,7 @@ Vicky Vyedina     https://github.com/vicvv
 Laura Franco   https://github.com/LauraFranco
 
 
-Technologies applied Angular, Node, Bootstrap, CSS, JavaScript, HTML5, Typescript, MockAPI
+Technologies applied: Angular, Node, Express, Bootstrap, CSS, JavaScript, HTML5, Typescript, MockAPI
 
 Photos by: 
 
