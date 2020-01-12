@@ -23,7 +23,6 @@ kount = 8;
   yourReading;
   count = 0;
   display;
-  //"/assets/img/cuteLook.jpg",
   imgArr = ["/assets/img/dreamstime_xs_3.jpg", "/assets/img/crazy.jpg", "/assets/img/bandana.jpg", "/assets/img/whiskers.jpg", "/assets/img/butterfly.jpg", "/assets/img/adorable.jpg", "/assets/img/roar.jpg", "/assets/img/nap.jpg"];
   currentImg = this.imgArr[this.count]
   deck= new Deck();
@@ -46,19 +45,16 @@ kount = 8;
       this.yourCardImg = hand;
     });
 
-    //this.readData();
 
   }
 
   take(){
     this.hand.push(this.deck.deal());
-    console.log("In take", this.hand)
     this.count = (this.count+1)%this.imgArr.length;
     this.currentImg = this.imgArr[this.count];
     if (this.count == 7){
       this.display = "true";
     }
-    console.log(this.imgArr, "I'm imgArr array");
 }
 
 
@@ -71,7 +67,6 @@ kount = 8;
       let card;
 
       for (i; i < this.hand.length; i++){
-          // console.log(this.hand)
           card = this.hand[i].getRank() +  " " + this.hand[i].getSuit();
           this.yourCard = card;
 
@@ -90,7 +85,6 @@ kount = 8;
 
       this.take();
       this.showHand();
-      // console.log(this.yourCard);
 
       this._readingService.hand(this.yourCard);
       this._readingService.readings(this.yourCard);
@@ -111,12 +105,9 @@ kount = 8;
 
     onCreate() {
     this.myread = {card: this.yourCard, reading: this.yourReading};
-    // console.log('My generated data', this.yourCard, this.yourReading);
-    // console.log('reading from db', this.myread);
 
     this._readingService.createRead(this.myread).subscribe(createdRead => {
       this.reads = [...this.reads, createdRead];
-      console.log(this.reads);
     });
   }
 
@@ -134,7 +125,6 @@ kount = 8;
 
         const obs = this._readingService.removeRead(this.reads[i].id);
         obs.subscribe(data => {
-          console.log('data from delete:', data);
         });
       }
       this.reads = [];

@@ -9,10 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class HomeComponent implements OnInit {
 
   constructor(private _router: Router) { }
-
-  // onEnterClick(): void {
-  //   this._router.navigate(['reading-room']);
-  // }
+  
   ngOnInit() {
 
   }

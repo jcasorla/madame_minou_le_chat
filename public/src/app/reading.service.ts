@@ -21,12 +21,10 @@ export class ReadingService {
   constructor(private readonly http: HttpClient) { }
 
   readings(card){
-    // console.log("got card"+ card);
     this.readings$.next(readings[card]);
   }
 
   hand(card){
-    // console.log("in hand of service");
     this.hand$.next(hand[card]);
   }
 
@@ -35,12 +33,10 @@ export class ReadingService {
   }
 
   getReads(): Observable<Read[]> {
-    console.log('trying to read db');
     return this.http.get<Read[]>(this.base);
   }
 
   removeRead(id: number): Observable<Read> {
-    console.log('I am in remove service');
     return this.http.delete<Read>(`${this.base}/${id}`);
   }
 

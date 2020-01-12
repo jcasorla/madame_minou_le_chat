@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: '', redirectTo: 'home', pathMatch: "full"},
   { path: 'reading-room', component: RoomComponent },
-  { path: 'multiplayer', component: MultiPlayerRoomComponent }
+  // { path: 'multiplayer', component: MultiPlayerRoomComponent }
 ];
 
 @NgModule({

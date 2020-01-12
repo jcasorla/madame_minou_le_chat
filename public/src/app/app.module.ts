@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { RoomComponent } from './room/room.component';
 import { MultiPlayerRoomComponent } from './multi-player-room/multi-player-room.component';
-//import { HttpClient } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
 import { ReadsComponent } from './reads/reads.component';
 
