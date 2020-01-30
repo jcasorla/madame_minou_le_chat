@@ -1,29 +1,69 @@
-<div class="container">
-    <input
+<div class="container" [ngStyle]="{'background-image': displayImg(), 'background-size': '100%'}">
+    
+    <!-- <input
     id="home"
     type="button"
     class="btn btn-outline-success"
     [routerLink]="['/home']"
     value="Home"
-  />
+  /> -->
 <div class="row">
-    <div id="blend1" class="col-sm-5">
-        <img class="pickCard" [src]="currentImg" alt='pickCard'>
+    <div class="col-lg-6 text-center">
+        <!-- style="width: 500px; height: 500px;" -->
+        <!-- <div style="width: 500px; height: 300px;" [ngStyle]="{'background-image': displayImg(), 'background-size': '100%'}">
+
+        </div> -->
+        <!-- <img style="width: 500px; height: 500px;" [src]="currentImg" alt='pickCard'> -->
+       
+        <div *ngIf='yourCard' class="placeholder2">
+            <h1>{{yourReading}}</h1>
+            <div class="color-overlay"></div>
+            
+            
+        </div>
+        <div *ngIf='yourCard' class="cardDown2">
+            <img class="img2" src="/assets/img/cards/{{yourCardImg}}.png" alt="card">
+
+        </div>
+        <div class="placeholder" *ngIf='!yourCard'></div>
+        <h1 *ngIf='!yourCard'>Pick a Card</h1>
+        <a *ngIf="!display" (click)="read()"><img class="img1" src="/assets/img/cards/back_cards-07.png" alt="redCard"></a>
+
         <div *ngIf= "display">
             <h1>Return later... Madame Minou Le Chat needs a power nap! </h1>
         </div>
+
+
+
+        
     </div>
-    <div id="blend1" class="col-xl">
+    <!-- <div class="col-lg-4">
+        <div *ngIf='yourCard' class="placeholder2">
+            <h1>{{yourReading}}</h1>
+            <div class="color-overlay"></div>
+            
+            
+        </div>
+        <div *ngIf='yourCard' class="cardDown2">
+            <img class="img2" src="/assets/img/cards/{{yourCardImg}}.png" alt="card">
+
+        </div>
+        <div class="placeholder" *ngIf='!yourCard'></div>
+        <h1 *ngIf='!yourCard'>Pick a Card</h1>
+        <a *ngIf="!display" (click)="read()"><img class="img1" src="/assets/img/cards/back_cards-07.png" alt="redCard"></a>
+
+
+    </div> -->
+    <!-- <div class="col-md-5">
         <div class="cardsDown" *ngIf='yourCard'>
             <h1>{{yourReading}}</h1>
             <div class="color-overlay"></div>
             <img class="img2" src="/assets/img/cards/{{yourCardImg}}.png" alt="card">
-            <!-- <button (click)="shuffle()" type="button" class="btn btn-link">Shuffle</button> -->
         </div>
         <div class="placeholder" *ngIf='!yourCard'></div>
         <h1 *ngIf='!yourCard'>Pick a Card</h1>
-        <a *ngIf="!display" (click)="read()"><img class="img1"  src="/assets/img/cards/back_cards-07.png" alt="redCard"></a>
-    </div>
+        <a *ngIf="!display" (click)="read()"><img class="img1 img-responsive"  src="/assets/img/cards/back_cards-07.png" alt="redCard"></a>
+    </div> -->
 </div>
 <app-reads *ngIf="reads.length == 7" [childVar]="reads" >  </app-reads>
 </div>

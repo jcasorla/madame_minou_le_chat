@@ -23,7 +23,9 @@ kount = 8;
   yourReading;
   count = 0;
   display;
-  imgArr = ["/assets/img/dreamstime_xs_3.jpg", "/assets/img/crazy.jpg", "/assets/img/bandana.jpg", "/assets/img/whiskers.jpg", "/assets/img/butterfly.jpg", "/assets/img/adorable.jpg", "/assets/img/roar.jpg", "/assets/img/nap.jpg"];
+  // imgArr = ["/assets/img/dreamstime_xs_3.jpg", "/assets/img/crazy.jpg", "/assets/img/bandana.jpg", "/assets/img/whiskers.jpg", "/assets/img/butterfly.jpg", "/assets/img/adorable.jpg", "/assets/img/roar.jpg", "/assets/img/nap.jpg"];
+
+  imgArr = ["url('/assets/img/dreamstime_xs_3.jpg')", "url('/assets/img/crazy.jpg')", "url('/assets/img/bandana.jpg')", "url('/assets/img/whiskers.jpg')",   "url('/assets/img/butterfly.jpg')", "url('/assets/img/adorable.jpg')", "url('/assets/img/roar.jpg')", "url('/assets/img/nap.jpg')"];
   currentImg = this.imgArr[this.count]
   deck= new Deck();
 
@@ -46,6 +48,9 @@ kount = 8;
     });
 
 
+  }
+  displayImg(){
+    return this.currentImg;
   }
 
   take(){

@@ -1,9 +1,13 @@
 .pickCard{
-    height:500px;
-    margin:auto;
-    opacity: 0.7;
+    /* height:500px; */
+    /* margin:auto; */
+    opacity: 0.5;
     /* background-blend-mode: overlay; */
     /* float: left; */
+}
+
+.opa{
+  opacity: 2.0;
 }
 #home{
   margin-right: 100%;
@@ -42,10 +46,16 @@
 }
 
 .placeholder{
-  height: 230px;
+  height: 210px;
+}
+.placeholder2{
+  height: 170px;
 }
 .cardsDown{
   height: 270px;
+}
+.cardsDown2{
+  height: 200px;
 }
 
 
@@ -55,6 +65,7 @@ h1 {
     animation-duration: 3s;
     z-index: 1;
     color: rgb(18, 219, 176);
+    background-color: black;
   }
   
   @keyframes slidein {
