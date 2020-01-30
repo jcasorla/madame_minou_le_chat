@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ReadingService } from '../reading.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import {Location} from '@angular/common';
+
 import { Deck } from '../modules/deck';
 // import { Read } from '../models/read';
 
@@ -35,7 +37,8 @@ kount = 8;
   constructor(
     private _readingService: ReadingService,
     private _route: ActivatedRoute,
-    private _router: Router
+    private _router: Router,
+    private _location: Location
   ) { }
 
   ngOnInit() {
@@ -134,6 +137,13 @@ kount = 8;
       }
       this.reads = [];
 
+
+  }
+  refresh(){
+    //refresh trick that did work to refresh @Input data
+    this._router.navigateByUrl("/home",{skipLocationChange:true}).then(() =>{
+      this._router.navigate([decodeURI(this._location.path())]);
+    });
 
   }
 

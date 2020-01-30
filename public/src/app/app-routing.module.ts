@@ -8,9 +8,12 @@ import { MultiPlayerRoomComponent } from './multi-player-room/multi-player-room.
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: '', redirectTo: 'home', pathMatch: "full"},
+  { path: '', redirectTo: 'reading-room', pathMatch: "full"},
   { path: 'reading-room', component: RoomComponent },
   // { path: 'multiplayer', component: MultiPlayerRoomComponent }
+
+   //   // the ** will catch anything that did not match any of the above routes
+   {  path: '**',  redirectTo: 'reading-room',  pathMatch: 'full'},
 ];
 
 @NgModule({
